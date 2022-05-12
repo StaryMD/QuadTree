@@ -26,7 +26,6 @@ Circle::Circle(const sf::Vector2f &pos) {
 	float angle = random_angle();
 	velocity = sf::Vector2f(cos(angle), sin(angle)) * SPEED;
 	color = sf::Color(rand() % 200 + 56, rand() % 200 + 56, rand() % 200 + 56);
-	//color = sf::Color(mass / 100000.0f * 256, 0, 0);
 }
 
 void Circle::draw() {

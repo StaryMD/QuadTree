@@ -1,13 +1,14 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include "myVector.hpp"
+#include <vector>
+//#include "myVector.cpp"
 #include "Circle.hpp"
 
 class Quad_Tree {
 	struct Node { 	
 		sf::Vector2f start, end;
-		myVector<Circle> circles;
+		std::vector<Circle> circles;
 		Node *child[4];
 		Node *parent;
 		bool is_leaf;

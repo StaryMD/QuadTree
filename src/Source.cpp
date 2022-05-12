@@ -76,8 +76,6 @@ int main() {
 			if (!LMB_was_pressed && !sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
 				qtree.push(Circle(sf::Vector2f(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y)));
 				obj_count++;
-
-				//LMB_was_pressed = true;
 			}
 		}
 		else {

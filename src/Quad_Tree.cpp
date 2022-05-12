@@ -136,16 +136,10 @@ void Quad_Tree::update(Node *node) {
 		update(node->child[3]);
 	}
 	else {
-		/*
-		for (auto &circle: node->circles)
-			circle.update();
-		*/
-		//node->circles.sort([](Circle &a, Circle &b){ return a.position.x < b.position.x; });
-		
 		for (auto it1 = node->circles.begin(); it1 != node->circles.end(); it1++) {
 			it1->update();
 			
-			for (auto it2 = it1 + 1; it2 != node->circles.end()/* && it2->position.x - it1->position.x < it1->radius + it2->radius*/; it2++) {
+			for (auto it2 = it1 + 1; it2 != node->circles.end(); it2++) {
 				const float dist_sq = dist_squared(it1->position, it2->position);
 
 				if (dist_sq < sqr(it1->radius + it2->radius)) {
